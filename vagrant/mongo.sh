@@ -7,6 +7,7 @@ if [ ! -e /etc/vagrant/mongo ]; then
 	apt-get update
 	apt-get install -y mongodb-org
 	systemctl enable mongod
+	systemctl restart mongod
 	touch /etc/vagrant/mongo
 else
 	echo ">>> mongo already setup..."
